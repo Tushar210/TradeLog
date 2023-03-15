@@ -1,0 +1,171 @@
+#signup:hover{
+    color:rgb(8, 108, 201);
+    background-color: rgba(169, 188, 255, 0.313);
+}
+#signup{
+    font-size:20px;
+    background-color: rgb(252, 195, 110);border-radius: 5%;color:rgb(22, 21, 21);font-weight: bold;
+}
+#home:hover{
+    background-color: rgba(255, 255, 255, 0.596);border-radius: 5%;color:rgb(22, 21, 21);font-weight: semi-bold;
+    border:4px double rgb(53, 43, 140);
+    font-weight:bold;
+}
+
+#home{
+    font-size:20px;
+    background-color: rgb(15, 42, 116);border-radius: 5%;color:rgb(255, 255, 255);
+    border:4px double rgb(241, 241, 241);
+}
+
+
+#dashboard:hover{
+    text-decoration: underline 2px solid rgb(71, 74, 77);
+   
+}
+#contact:hover{
+    text-decoration: underline 2px solid rgb(71, 74, 77);
+   
+}
+
+#about:hover{
+    text-decoration: underline 2px solid rgb(73, 74, 75);
+}
+
+#analytic:hover{
+    text-decoration: underline 2px solid rgb(73, 74, 75);
+}
+#contact,#about,#analytic,#dashboard{
+    font-size:20px;
+}
+#logbt:hover{
+    background-color:rgba(119, 163, 250, 0.411) ;color:black; transition: all 0.6s ease;
+}
+#signupbt:hover{
+    background-color:rgba(48, 255, 25, 0.071) ;color:black; transition: all 0.6s ease;
+}
+
+#adt{
+    border-radius: 25px;
+    padding-top:10px;
+    border: 4px double white;
+    font-size: 20px;
+    background-color:rgb(48, 48, 134) ;
+    color:white;
+    width:18rem;
+    height:4rem
+}
+#adt:hover{
+    background-color:rgb(243, 250, 243) ;
+    font-size: 22px;
+    color:rgb(51, 130, 52) ;
+    border: 4px double rgb(0, 0, 0);
+    transition: all 0.6s ease;
+
+}
+
+
+#gtd{
+    border-radius: 25px;
+    padding-top:10px;
+    border: 4px double white;
+    font-size: 20px;
+    
+    background-color:rgb(58, 150, 59) ;
+    color:white;
+    width:18rem;
+    height:4rem
+}
+#gtd:hover{
+    background-color:rgb(249, 249, 255) ;
+    font-size: 22px;
+    color:rgb(47, 54, 119);
+    border: 4px double rgb(0, 0, 0);
+    transition: all 0.6s ease;
+
+}
+
+.table {
+    border: 5px double black;
+  }
+  
+  .table th,
+  .table td {
+    border: 1px solid black;
+  }
+  
+		.table21 {
+			border-collapse: collapse;
+			margin: auto;
+			font-weight: bold;
+			text-align: center;
+		}
+		.td21 {
+			width: 400px;
+			height: 200px;
+			border: 2px solid black;
+			padding: 50px;
+		} 
+		.green {
+            background-color: #1f4a78;
+            color:rgb(255, 255, 255);
+		}
+		.yellow {
+			/* background-color: #FFFF00; */
+           
+            background-color: #15395f;
+             color:rgb(255, 255, 255);
+		}
+		.orange {
+            background-color: #15395f;
+             color:rgb(255, 255, 255);
+		}
+		.red {
+            background-color: #3178c4;
+            color:rgb(255, 255, 255);
+		}
+	
+
+        .green:hover{
+            background-color: aliceblue;
+            color:black;
+        }
+        .yellow:hover{
+            background-color: aliceblue;
+            color:black;
+        }
+        .orange:hover{
+            background-color: aliceblue;
+            color:black
+        }
+        .red:hover{
+            background-color: aliceblue;
+            color:black
+        }
+
+        
+       /* Desktop styles */
+@media screen and (min-width: 992px) {
+    .main {
+      display: block;
+    }
+    
+    /* hide none */
+    .none {
+      display: none;
+    }
+  }
+  
+  /* Phone and tablet styles */
+  @media screen and (max-width: 991px) {
+    /* hide text */
+    .main {
+      display: none;
+    }
+    
+    /* show none */
+    .none {
+      display: block;
+    }
+  }
+  

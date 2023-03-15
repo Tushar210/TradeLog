@@ -1,0 +1,78 @@
+<%-include('partials/header') ;%>
+
+<div class="container-fluid ">
+    <%-include('partials/navbarhome') ;%>
+</div>
+<div class="container mt-3  " >
+  <div class="container  mb-4 py-2 text-center bg-white " style="color:rgb(39, 101, 63)">
+    <h1>*New Trade*</h1>
+    <hr>
+</div>
+    <form action="/add-trade" id="add-trade" style="width:70%" method="POST">
+        <div class="row mb-2">
+          <label for="name" class="col-sm-2 col-form-label fs-5">Date</label>
+          <div class="col-sm-10">
+            <input type="date" name="Date" value="" class="form-control" id="inputname">
+          </div>
+        </div>
+        <div class="row mb-2">
+          <label for="amount" class="col-sm-2 col-form-label fs-5">Script</label>
+          <div class="col-sm-10">
+            <input type="text" name="Script" value="" class="form-control" id="inputPassword3">
+          </div>
+
+          </div>
+          <div class="row mb-2">
+            <label for="category" class="col-sm-2 col-form-label fs-5">Entry time</label>
+            <div class="col-sm-10">
+              <input type="time" name="Entrytime" value=""class="form-control" id="inputPassword3">
+            </div>
+            </div>
+        <div class="row mb-2">
+          <label for="name" class="col-sm-2 col-form-label fs-5">Entry Price</label>
+          <div class="col-sm-10">
+            <input type="number" name="Entryprice" value="" class="form-control" id="inputname">
+          </div>
+        </div>
+        
+        <div class="row mb-2">
+          <label for="amount" class="col-sm-2 col-form-label fs-5">Exit time</label>
+          <div class="col-sm-10">
+            <input type="time" name="Exittime" value=""  class="form-control" id="inputPassword3">
+          </div>
+          </div>
+
+          <div class="row mb-2">
+            <label for="category" class="col-sm-2 col-form-label fs-5">Exit Price</label>
+            <div class="col-sm-10">
+              <input type="number" name="Exitprice" value="" class="form-control" id="inputPassword3">
+            </div>
+            </div>
+        <div class="row mb-2">
+          <label for="name" class="col-sm-2 col-form-label fs-5">StopLoss</label>
+          <div class="col-sm-10">
+            <input type="number" name="StopLoss" value="" class="form-control" id="inputname">
+          </div>
+        </div>
+        <div class="row mb-2">
+          <label for="amount" class="col-sm-2 col-form-label fs-5">Quantity(qty)</label>
+          <div class="col-sm-10">
+            <input type="number" name="Qty" value="" class="form-control" id="inputPassword3">
+          </div>
+          </div>
+
+          <div class="row mb-2">
+            <label for="category" class="col-sm-2 col-form-label fs-5">Strategy Name</label>
+            <div class="col-sm-10">
+              <input type="text" name="StrategyName" value="" class="form-control" id="inputPassword3">
+            </div>
+            </div>
+  
+       
+        <div class="container mt-3 mb-5">
+            <button type="submit" class="btn btn-primary fs-5">Add</button>
+        </div>
+      </form>
+</div>
+
+<%-include('partials/footer') ;%>

@@ -1,0 +1,82 @@
+<%-include('partials/header') ;%>
+
+<div class="container-fluid ">
+    <%-include('partials/navbarhome') ;%>
+</div>
+<div class="container mt-3  " >
+    <div class="container  mb-4 py-2 text-center bg-white " style="color:rgb(14, 38, 88)">
+        <h1>*Trade Updation*</h1>
+        <hr>
+    </div>
+    <form action="/updatetrade/<%=srch_key._id%>" id="update-trade" style="width:70%" method="POST">
+        <div class="row mb-2">
+          <label for="name" class="col-sm-2 col-form-label fs-5">Date</label>
+          
+          <div class="col-sm-10">
+            <input type="date" name="Date" value="<%= srch_key.Date %>" class="form-control" id="inputname">
+          </div>
+        
+        </div>
+
+        <div class="row mb-2">
+          <label for="amount" class="col-sm-2 col-form-label fs-5">Script</label>
+          <div class="col-sm-10">
+            <input type="text" name="Script" value="<%=srch_key.Script%>" class="form-control" id="inputPassword3">
+          </div>
+
+          </div>
+          <div class="row mb-2">
+            <label for="category" class="col-sm-2 col-form-label fs-5">Entry time</label>
+            <div class="col-sm-10">
+              <input type="time" name="Entrytime" value="<%=srch_key.Entrytime%>"placeholder="HH:MM"class="form-control" id="inputPassword3">
+            </div>
+            </div>
+        <div class="row mb-2">
+          <label for="name" class="col-sm-2 col-form-label fs-5">Entry Price</label>
+          <div class="col-sm-10">
+            <input type="number" name="Entryprice" value="<%=srch_key.Entryprice%>" class="form-control" id="inputname">
+          </div>
+        </div>
+        <div class="row mb-2">
+          <label for="amount" class="col-sm-2 col-form-label fs-5">Exit time</label>
+          <div class="col-sm-10">
+            <input type="time" name="Exittime" value="<%=srch_key.Exittime %>" placeholder="HH:MM" class="form-control" id="inputPassword3">
+          </div>
+
+          </div>
+          <div class="row mb-2">
+            <label for="category" class="col-sm-2 col-form-label fs-5">Exit Price</label>
+            <div class="col-sm-10">
+              <input type="number" name="Exitprice" value="<%=srch_key.Exitprice%>" class="form-control" id="inputPassword3">
+            </div>
+            </div>
+        <div class="row mb-2">
+          <label for="name" class="col-sm-2 col-form-label fs-5">StopLoss</label>
+          <div class="col-sm-10">
+            <input type="number" name="StopLoss" value="<%=srch_key.StopLoss %>" class="form-control" id="inputname">
+          </div>
+        </div>
+        <div class="row mb-2">
+          <label for="amount" class="col-sm-2 col-form-label fs-5">Quantity(qty)</label>
+          <div class="col-sm-10">
+            <input type="number" name="Qty" value="<%= srch_key.Qty%>" class="form-control" id="inputPassword3">
+          </div>
+          </div>
+          
+     
+
+          <div class="row mb-2">
+            <label for="category" class="col-sm-2 col-form-label fs-5">Strategy Name</label>
+            <div class="col-sm-10">
+              <input type="text" name="StrategyName" value="<%=srch_key.StrategyName %>" class="form-control" id="inputPassword3">
+            </div>
+            </div>
+        
+       
+        <div class="container mt-3 mb-5">
+            <button type="submit" class="btn btn-success fs-5">Update</button>
+        </div>
+      </form>
+</div>
+
+<%-include('partials/footer') ;%>

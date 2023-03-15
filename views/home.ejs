@@ -1,0 +1,39 @@
+<%-include('partials/header') ;%>
+
+<div class="container-fluid ">
+    <%-include('partials/navbarhome') ;%>
+</div>
+<!-- <div class="container-fluid py-3 bg-dark"> -->
+<div class="container-fluid mt-4 ">
+    <nav class="navbar  ">
+        <div class="container  ">
+            <a class=" btn btn-primary ms-auto fs-5" href="/newtrade">
+                <i class="fa fa-plus">Add Trade</i> 
+            </a>
+            <!-- <a class=" ms-auto fs-5" href="">
+               <div class="c">
+                <select>
+                    <option value="option1">Last 7 days</option>
+                    <option value="option2">Last 15 days</option>
+                    <option value="option3">Last 30days</option>
+                  </select>
+                  
+               </div>
+            </a> -->
+            
+        </div> 
+    </nav>
+</div>
+<div class="container-fluid mb-5 " >
+    
+    <%-include('partials/table') ;%>
+</div>
+
+<!-- </div> -->
+
+<footer>
+<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2023 Copyright:
+    <a class="text-reset fw-bold" href="/">TradeLog</a>
+  </div>
+</footer>

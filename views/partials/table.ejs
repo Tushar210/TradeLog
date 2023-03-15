@@ -1,0 +1,97 @@
+<!-- <form action="" method="POST"> -->
+    <table class="table table-hover  " >
+        <thead class="table-dark">
+            <tr class="py- 4 text-center " style="font-size:18px">
+                <th>Date</th>
+                <th>Script</th>
+                <th>Entry Time</th>
+                <th>Entry Price</th>
+                <th>Exit Time</th>
+                <th>Exit Price</th>
+                <th>StopLoss</th>
+                <th>Qty</th>
+                <th>Profit/Loss</th>
+                <th>Strategy Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+   
+        <tbody class="py-2 text-center " style="font-size:18px">
+            <%ret_data.forEach((i)=>{%>
+
+            <tr>
+
+                <td>
+                    <% if (i.Date) { %>
+                      <%= i.Date.toLocaleDateString('en-GB') %>
+                    <% } %>
+                  </td>
+                  
+                  
+
+                <td><%=i.Script%></td>
+                <td><%=i.Entrytime%></td>
+                <td><%=i.Entryprice%></td>
+
+                <td><%=i.Exittime%></td>
+                
+                <td><%=i.Exitprice%></td>
+                <td><%=i.StopLoss%></td>
+                <td><%=i.Qty%></td>
+
+                <td class="profit-loss" data-type="<%= i.Exitprice > i.Entryprice ? 'profit' : 'loss' %>">
+                    <% if(i.Exitprice > i.Entryprice){ %>
+                      <%= "Profit" %>
+                    <% } else if(i.Exitprice < i.Entryprice){ %>
+                      <%= "Loss" %>
+                    <% } %>
+                  </td>
+                
+                <td><%=i.StrategyName%></td>
+            </td>
+                <td>
+                        <form action="/updatetrade/<%=i._id %>" class="d-inline" method="get">
+                            <button class="btn" type="submit">
+                                <i class="fa fa-pencil-square btn btn-primary" aria-hidden="true"></i>
+                            </button>
+                        </form>
+
+                    <form action="/deletetrade/<%=i._id %>" class="d-inline" method="post">
+                        <button class="btn" type="submit">
+                            <i class="fa fa-trash btn btn-danger" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                </td>
+            </tr>
+            
+            <%})%>
+            
+        </tbody>
+               
+      
+    </table>
+    
+    <script>
+    
+    var result = document.querySelectorAll('.profit-loss');
+result.forEach((result)=>{
+  var type = result.getAttribute('data-type');
+  if (type === "profit") {
+    result.style.color = 'white';
+    result.style.fontWeight = 'bold';
+    result.style.backgroundColor = 'rgb(11, 121, 11)';
+
+  } else if(type === "loss") {
+    result.style.color = 'white';
+    result.style.fontWeight = 'bold';
+    result.style.backgroundColor = 'rgb(174, 3, 3)';
+  }
+  else{
+    result.style.backgroundColor = 'white';
+  }
+});
+
+
+   
+  </script>
+   
